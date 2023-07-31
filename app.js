@@ -5,6 +5,8 @@ const connectToDB = require('./config/db.js')
 
 const app = express();
 
+app.use(express.json())
+
 connectToDB();
 
 app.use ('/', myRoutes)
